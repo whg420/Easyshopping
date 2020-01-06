@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-// import {BrowserRouter,Switch,Route,Redirect} from 'react-router-dom';
-class index extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
-}
+import React from 'react';
+import RouterView from './RouterView'
+import config from './routerConfig'
+import {BrowserRouter} from 'react-router-dom'
 
-export default index;
+export default ()=>{
+    return <BrowserRouter>
+        <RouterView routes={config.routes}/>
+    </BrowserRouter>
+}
