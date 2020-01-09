@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-01-07 09:37:30
- * @LastEditTime : 2020-01-09 08:14:50
+ * @LastEditTime : 2020-01-09 11:24:08
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Easyshopping\my-app\src\store\module\login.ts
@@ -27,14 +27,20 @@ export default class Home{
 	@action
 	async homeActions(){
         const res:any=await homeActions();
-        console.log(res,'----------------store------homestore------------->');
-        console.log(res.banner,'-banner---------------store------homestore-----------banner-->');
+        // console.log(res,'----------------store------homestore------------->');
         this.bannerList=res.banner;
-        this.brandList=res.brandList
-        this.categoryList=res.categoryList
+        // console.log(res.banner,'-banner---------------store------homestore-----------banner-->');
         this.channelList=res.channel
-        this.hotGoodsList=res.hotGoodsList
+        // console.log(res.channel,'-banner---------------store------homestore-----------banner-->');
+        this.brandList=res.brandList
+        // console.log(res.brandList,'-banner---------------store------homestore-----------banner-->');
         this.newGoodsList=res.newGoodsList
+        // console.log(res.newGoodsList,'-banner---------------store------homestore-----------banner-->');
+        this.hotGoodsList=res.hotGoodsList
+        // console.log(res.hotGoodsList,'-banner---------------store------homestore-----------banner-->');
         this.topicList=res.topicList
+        // console.log(res.topicList,'-banner---------------store------homestore-----------banner-->');
+        this.categoryList=res.categoryList
+        // console.log(res.categoryList,'-banner---------------store------homestore-----------banner-->');
 	}
 }
