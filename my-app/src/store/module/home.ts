@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-01-07 09:37:30
- * @LastEditTime : 2020-01-09 11:24:08
+ * @LastEditTime : 2020-01-09 14:04:26
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Easyshopping\my-app\src\store\module\login.ts

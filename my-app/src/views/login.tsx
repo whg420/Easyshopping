@@ -2,8 +2,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react"
 import '../style/login.css'
-import { useObserver } from 'mobx-react-lite'
 import useStore from '../util/useStore'
+import { useObserver } from 'mobx-react-lite'
 // import login from '../store/module/login';
 
 // interface ItemType {
@@ -16,8 +16,8 @@ import useStore from '../util/useStore'
 // }
 
 const Login: React.FC = () => {
-    let mobile:string = "";
-    let password:string = "";
+    let mobile:string = "15323807318";
+    let password:string = "123456";
     let store = useStore();
     let { login } = store;
     const mobileChange = (event: any) => {

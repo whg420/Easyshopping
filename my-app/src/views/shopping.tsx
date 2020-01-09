@@ -1,14 +1,18 @@
-
-import React from "react"
+import React, { useEffect } from "react"
 import { useObserver } from 'mobx-react-lite'
-
-import '../style/home.css'
+import useStore from '../util/useStore'
 const Shopping: React.FC = () => {
+    let store = useStore();
+    let { shop } = store;
+    useEffect(() => {
+        shop.shopActions()
+    }, [shop])
     return useObserver(() => (
-        <div className= 'main' >
-        Shopping
+        <div>
+           shopping
         </div>
-    ))
-}
-
-export default Shopping
+            )
+            )
+        }
+        
+        export default Shopping
