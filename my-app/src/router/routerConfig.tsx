@@ -13,7 +13,6 @@ export default {
     },{
         path: '/main',
         component: (props:any)=>(<>
-            <p>主页面</p>
             <RouterView routes={props.routes}></RouterView>
         </>),
         children: [{

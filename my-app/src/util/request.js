@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2019-12-06 21:27:44
- * @LastEditTime: 2019-12-12 16:27:35
- * @LastEditors: your name
+ * @LastEditTime : 2020-01-08 15:47:41
+ * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \car\carPage\src\utils\request.js
  */
@@ -10,11 +10,10 @@ import axios from 'axios';
 
 // 创建axios实例
 const instance = axios.create({
-  baseURL: 'http://127.0.0.1:8888',
+  baseURL: 'http://169.254.19.79:8888',
   timeout: 1000,
   // headers: {'X-Custom-Header': 'foobar'}
 });
-
 // 请求拦截器
 instance.interceptors.request.use(function (config) {
   // Do something before request is sent
@@ -28,8 +27,9 @@ instance.interceptors.request.use(function (config) {
 // 响应拦截器
 instance.interceptors.response.use(function (response) {
   // Do something with response data
-  if (response.status == 200) {
-    if (response.data.code === 1) {
+  if (response.status === 200) {
+    console.log(response.data,'----------------response.data.code-------------->');
+    if (response.data) {
       return response.data.data
     } else {
       return {
