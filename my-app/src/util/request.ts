@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-01-09 19:41:33
+ * @LastEditTime: 2020-01-10 15:57:52
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \my-app\src\util\request.ts
+ */
 import axios from 'axios'
 const instance = axios.create({
   baseURL:'http://169.254.19.79:8888'
