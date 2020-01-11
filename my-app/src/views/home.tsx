@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Main from './main'
 interface Props {
     
 }
@@ -13,7 +13,7 @@ export default class home extends Component<Props, State> {
     render() {
         return (
             <div>
-                首页
+               home
             </div>
         )
     }
