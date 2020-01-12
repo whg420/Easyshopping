@@ -22,7 +22,8 @@ const TopicList: React.FC = () => {
           autoplay
           infinite
         >
-          {home.topicList.map((item, index) => (
+          {
+            home.topicList.map((item, index) => (
               <img
                 src={item.item_pic_url}
                 alt=""
@@ -34,7 +35,8 @@ const TopicList: React.FC = () => {
                 }}
                 className="spaceImg"
               />
-          ))}
+          ))
+        }
         </Carousel>
       </WingBlank>
         </div>

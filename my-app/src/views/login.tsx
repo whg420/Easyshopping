@@ -1,23 +1,18 @@
-/* eslint-disable react/no-direct-mutation-state */
-/* eslint-disable jsx-a11y/alt-text */
+
 import React from "react"
 import '../style/login.css'
 import useStore from '../util/useStore'
 import { useObserver } from 'mobx-react-lite'
-// import login from '../store/module/login';
-
-// interface ItemType {
-//     mobile: string,
-//     password: string
-// }
-// interface PropsType {
-//     mobileChange?: Function,
-//     passwordChange?: Function
-// }
-
-const Login: React.FC = () => {
+// import { withRouter } from 'react-router-dom';
+import {History} from 'history'
+interface PropType{
+    location:History.LocationState
+    history:History
+}
+const Login: React.FC<PropType>= (props) => {
     let mobile:string = "15323807318";
     let password:string = "123456";
+    
     let store = useStore();
     let { login } = store;
     const mobileChange = (event: any) => {
@@ -29,12 +24,14 @@ const Login: React.FC = () => {
         password = val.value
     }
     const ck = () => {
-        console.log(mobile,password);
         let obj:any={
             mobile,
             password
         }
         login.loginActions(obj)
+        props.history.push('/main/home')
+        // props.history.push({pathname:"/main/home")      
+        
     }
     return useObserver(()=>(
         <div className='main'>

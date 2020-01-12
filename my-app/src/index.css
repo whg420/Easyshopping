@@ -3,6 +3,8 @@ html {
   height: 100%;
   overflow-x:auto;
   overflow-y:scroll;
+  /* 解决antd走马灯（轮播图）报错问题 */
+  touch-action:none;
   }
   body, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td {
   font-weight:400;

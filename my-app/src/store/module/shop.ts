@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-01-09 13:51:25
- * @LastEditTime : 2020-01-10 16:55:16
+ * @LastEditTime : 2020-01-11 16:35:39
  * @LastEditors  : Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \my-app\src\store\module\shop.ts
